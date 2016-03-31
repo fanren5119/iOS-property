@@ -12,9 +12,9 @@
         ③ ivar_list: 成员变量列表；
         ④ method_list：方法列表；
         ⑤ prop_list：属性列表；
-        每次增加一个属性，系统都会在ivar_list中增加一个成员变量的描述，在method_list中增加setter和getter方法的描述，在prop_
-    list中增加一个属性的描述，然后计算出该属性的偏移量，给出setter和getter方法的实现（setter方法中从偏移量的位置开始赋值，在
-    getter方法中从偏移量的位置开始取值）。
+        每次增加一个属性，系统都会在ivar_list中增加一个成员变量的描述，在method_list中增加setter和getter方法的描述，在
+	prop_list中增加一个属性的描述，然后计算出该属性的偏移量，给出setter和getter方法的实现（setter方法中从偏移量的位置开始
+	赋值，在getter方法中从偏移量的位置开始取值）。
 ##3.在protocol与category中使用属性
         ① 在protocol中使用属性，只会生成setter与getter方法的声明，而遵守该协议的对象必须实现该属性；
         ② 在category中使用属性，也只会生成setter与getter方法的声明，而且也不会生成属性对应的实例变量，如果要增加属性的实现，
