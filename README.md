@@ -21,3 +21,17 @@
     需借助俩那个方法
             objc_setAssociatedObject
             objc_getAssociatedObject
+##4.@property关键字
+		① nonatomic：在默认情况下此编译器合成的方法会通过锁定机制确保其原子性，如果具备nonatomic，则不适用同步锁；
+		② 读写权限：readwrite(读写)、readonly(只读)；
+		③ 内存管理语义：strong, weak, assign, copy, unsafe_unretained；
+		④ 方法名：getter=<name>, setter=<name>；
+		⑤ 不常用：nonnull, null_resettable, nullable。
+##5.@synthesize的使用场景
+		什么情况下不会autosynthesize（自动合成）？
+		① 重写了setter方法和getter方法时；
+		② 重写了只读属性的getter方法时；
+		③ 使用了@dynamic时；
+		④ 在@protocol中定义了的所有属性；
+		⑤ 在category中定义了的所有属性；
+		⑥ 重载了的属性（当你在子类中重载了父类中的属性，必须使用@synthesize来手动合成ivar）。
